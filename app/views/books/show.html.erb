@@ -1,0 +1,19 @@
+<h3><%=  @book.title %></h3>
+<h4><%=  @book.desc %></h4>
+
+<% @book.articles.each do |article|%>
+		<p><%=  article.title %></p>
+		<p><%=  article.desc %></p>
+		<%= link_to 'Show', book_article_path(article.book,article) %>
+		<p>----   end  of article ------------</p>
+	<% end %>
+		<%= link_to 'Create Article', new_book_article_path(@book.id) %>
+
+
+			<% @book.posts.each do |post|%>
+		<p><%=  post.title %></p>
+		<p><%=  post.desc %></p>
+
+		<p>----   end  of post ------------</p>
+	<% end %>
+		<%= link_to 'Create post', new_book_post_path(@book.id) %>

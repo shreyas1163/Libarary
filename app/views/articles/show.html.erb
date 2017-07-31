@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+  <p><%= @article.title %></p>
+  <p><%= @article.desc %></p>
+
+<%= link_to 'Edit', edit_book_article_path(@book, @article) %> |
+<%= link_to 'Back', book_articles_path(@book) %>
